@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1320672549 source:d:\programacao\c_cpp\luckyeng\src\main.cpp
+	"Game.h"
+
+1320674322 source:d:\programacao\c_cpp\luckyeng\src\game.cpp
+	"Game.h"
+
+1320674136 d:\programacao\c_cpp\luckyeng\src\game.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+

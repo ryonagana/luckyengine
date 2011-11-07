@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="src\FontManager.h" open="1" top="1" tabpos="5">
+		<Cursor position="231" topLine="0" />
+	</File>
+	<File name="src\Game.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1354" topLine="0" />
+	</File>
+	<File name="src\Game.h" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="78" topLine="0" />
+	</File>
+	<File name="src\main.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
