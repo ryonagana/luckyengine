@@ -10,6 +10,9 @@ Game::Game(){
     Title = "Default Window";
     isFullScreen = false;
 
+
+
+
     Start();
     InitWindow(800,600,32,"Default Window");
     SetTimer(60);
@@ -29,11 +32,15 @@ Game::Game(int width, int height, int bpp, std::string title, bool fullscreen){
     InitWindow(width,height,bpp,title);
     SetTimer(60);
     InitEvents();
+    isAppFinished = false;
 
 
 }
 
 Game::~Game(){
+
+    al_destroy_bitmap(g_screen);
+    al_destroy_event_queue(g_queue);
 
 }
 
@@ -118,11 +125,26 @@ void Game::SetTimer(int ticks){
 
 void Game::InitEvents(void){
 
+
+
+
+
     al_register_event_source(g_queue, al_get_keyboard_event_source());
     al_register_event_source(g_queue, al_get_display_event_source(g_display));
     al_register_event_source(g_queue, al_get_timer_event_source(g_timer));
 
     al_start_timer(g_timer);
 
+
 }
+
+bool Game::AppFinished(){
+    return isAppFinished;
+}
+
+void Game::AppFinished(bool val){
+    isAppFinished = val;
+}
+
+
 

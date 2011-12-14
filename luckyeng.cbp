@@ -40,6 +40,12 @@
 		<Unit filename="src\FontManager.h" />
 		<Unit filename="src\Game.cpp" />
 		<Unit filename="src\Game.h" />
+		<Unit filename="src\Global.cpp" />
+		<Unit filename="src\Global.h" />
+		<Unit filename="src\Player.cpp" />
+		<Unit filename="src\Player.h" />
+		<Unit filename="src\Position.cpp" />
+		<Unit filename="src\Position.h" />
 		<Unit filename="src\main.cpp" />
 		<Unit filename="src\main.h" />
 		<Extensions>

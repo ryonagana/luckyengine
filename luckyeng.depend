@@ -1,12 +1,57 @@
 # depslib dependency file v1.0
-1320672549 source:d:\programacao\c_cpp\luckyeng\src\main.cpp
+1323889364 source:d:\programacao\c_cpp\luckyeng\src\main.cpp
+	"main.h"
+	"Player.h"
+
+1320929682 source:d:\programacao\c_cpp\luckyeng\src\game.cpp
 	"Game.h"
 
-1320674322 source:d:\programacao\c_cpp\luckyeng\src\game.cpp
-	"Game.h"
-
-1320674136 d:\programacao\c_cpp\luckyeng\src\game.h
+1320928109 d:\programacao\c_cpp\luckyeng\src\game.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_ttf.h>
+
+1320784511 source:d:\programacao\c_cpp\luckyeng\src\fontmanager.cpp
+	"FontManager.h"
+
+1323893035 d:\programacao\c_cpp\luckyeng\src\fontmanager.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+	<vector>
+
+1320783437 source:d:\programacao\c_cpp\luckyeng\src\render.cpp
+	"Render.h"
+
+1320783481 d:\programacao\c_cpp\luckyeng\src\render.h
+	<iostream>
+	"Game.h"
+
+1321014355 source:d:\programacao\c_cpp\luckyeng\src\position.cpp
+	"Position.h"
+
+1322225258 d:\programacao\c_cpp\luckyeng\src\position.h
+
+1321013737 d:\programacao\c_cpp\luckyeng\src\main.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
+
+1323892099 source:d:\programacao\c_cpp\luckyeng\src\player.cpp
+	"Player.h"
+	"Global.h"
+
+1323887171 d:\programacao\c_cpp\luckyeng\src\player.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	"Position.h"
+	<cmath>
+
+1323892885 source:d:\programacao\c_cpp\luckyeng\src\global.cpp
+	"global.h"
+
+1323892994 d:\programacao\c_cpp\luckyeng\src\global.h
 

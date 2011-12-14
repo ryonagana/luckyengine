@@ -3,14 +3,18 @@
 #include <allegro5/allegro_ttf.h>
 
 
-
 class Game {
 
     public:
+
     ALLEGRO_TIMER *g_timer;
     ALLEGRO_DISPLAY *g_display;
     ALLEGRO_EVENT_QUEUE *g_queue;
     ALLEGRO_BITMAP *g_screen;
+
+    static  int WindowWidth;
+    static  int WindowHeight;
+    static  ALLEGRO_DISPLAY* disp;
 
     int W();
     void W(int val);
@@ -29,13 +33,23 @@ class Game {
     void SetTimer(int ticks);
 
 
+    bool AppFinished();
+    void AppFinished(bool val);
 
 
     Game();
     Game(int width, int height, int bpp, std::string title, bool fullscreen);
     ~Game();
 
+
+
+
     private:
+
+
+
+
+
     void Start(void);
     void InitWindow(int width, int height, int bpp, std::string title);
 
@@ -45,9 +59,15 @@ class Game {
     int Height;
     int Bpp;
     bool isFullScreen;
+    bool isAppFinished;
     std::string Title;
 
 
 
 
+
+
+
 };
+
+
