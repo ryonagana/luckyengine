@@ -1,10 +1,10 @@
 #include  "Player.h"
 #include "Global.h"
 
-Player::Player(){
+void Player::InitPlayer(){
 
-    playerSprite =  al_load_bitmap("data/player.bmp");
-    al_convert_mask_to_alpha(playerSprite, al_map_rgb(255,0,255));
+    spr =  al_load_bitmap("data/player.bmp");
+    al_convert_mask_to_alpha(spr, al_map_rgb(255,0,255));
 
     frame = 0;
     animNum = 0;
@@ -15,6 +15,8 @@ Player::Player(){
     Speed = 1.0;
     keys[0] = keys[1] = keys[2] = keys[3] = keys[4] = false;
     skistate = SKI_SIDESTOP;
+    bound_x = 18;
+    bound_y = 18;
 
 
 }
@@ -51,23 +53,35 @@ void Player::Update(uint64_t time){
     //PlayerPosition.Y += Speed * AbsoluteVal<float>( PlayerPosition.Y - SCREEN_HEIGHT);
     if(skistate == SKI_SLIDINGDOWN || skistate == SKI_DIAGONAL_L || skistate == SKI_DIAGONAL_R ) {
 
-        PlayerPosition.Y += (Speed + 5) * AbsoluteVal<float>( PlayerPosition.Y + SCREEN_HEIGHT);
+        Position.Y += (Speed + 6 ) * AbsoluteVal<float>( Position.Y + SCREEN_HEIGHT / 2);
 
     }else {
 
-        float oldpos = PlayerPosition.Y;
+        float oldpos = Position.Y;
 
-        PlayerPosition.Y = oldpos;
+        Position.Y = oldpos;
 
+
+    }
+
+    if( keys[KEY_UP] && direction == 1 && skistate == SKI_SIDESTOP ){
+
+        Position.Y -= Speed * AbsoluteVal<float>( Position.Y - 2);
+
+
+    }else {
+
+        float oldpos = Position.Y;
+        Position.Y = oldpos;
 
     }
 
     if ( keys[KEY_LEFT] && direction == 3 && skistate == SKI_SIDESTOP){
-        PlayerPosition.X -= Speed * AbsoluteVal<float>( PlayerPosition.X + SCREEN_HEIGHT);
+        Position.X -= Speed * AbsoluteVal<float>( Position.X + SCREEN_HEIGHT);
     }
 
        if ( keys[KEY_RIGHT] && direction == 4 && skistate == SKI_SIDESTOP){
-        PlayerPosition.X += Speed * AbsoluteVal<float>( PlayerPosition.X + SCREEN_HEIGHT);
+        Position.X += Speed * AbsoluteVal<float>( Position.X + SCREEN_HEIGHT);
     }
 
     //std::cout << "Direction " << direction;
@@ -77,19 +91,19 @@ void Player::Update(uint64_t time){
 void Player::Draw(ALLEGRO_BITMAP *buffer){
 
     if(direction ==  2){
-    al_draw_bitmap_region(playerSprite,64,0,32,32, Cast<int>(PlayerPosition.X) ,Cast<int>(PlayerPosition.Y),NULL);
+    al_draw_bitmap_region(spr,64,0,32,32, Cast<int>(Position.X) ,Cast<int>(Position.Y),0x0);
 
     }else if(direction == 1) {
 
-        al_draw_bitmap_region(playerSprite,0,0,32,32, Cast<int>(PlayerPosition.X) ,Cast<int>(PlayerPosition.Y),NULL);
+        al_draw_bitmap_region(spr,0,0,32,32, Cast<int>(Position.X) ,Cast<int>(Position.Y),0x0);
 
     }else if(direction == 3){
 
-        al_draw_bitmap_region(playerSprite,0,0,32,32, Cast<int>(PlayerPosition.X) ,Cast<int>(PlayerPosition.Y),NULL);
+        al_draw_bitmap_region(spr,0,0,32,32, Cast<int>(Position.X) ,Cast<int>(Position.Y), ALLEGRO_FLIP_HORIZONTAL );
 
     }else if( direction == 4){
 
-        al_draw_bitmap_region(playerSprite,0,0,32,32, Cast<int>(PlayerPosition.X) ,Cast<int>(PlayerPosition.Y),NULL);
+        al_draw_bitmap_region(spr,0,0,32,32, Cast<int>(Position.X) ,Cast<int>(Position.Y),0x0);
 
     }
 

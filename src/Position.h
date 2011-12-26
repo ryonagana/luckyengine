@@ -1,8 +1,8 @@
-
+#pragma once
 
 // Store X and Y
 template<class T>
-class Position {
+class Vector2 {
 
     public:
     T X,Y;

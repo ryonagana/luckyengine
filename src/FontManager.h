@@ -26,8 +26,22 @@ class gFont {
             return size;
         }
 
-        void draw(char* text, ALLEGRO_COLOR color,  float x, float y, int alignment){
+        void draw(const char* text, ALLEGRO_COLOR color,  float x, float y, int alignment){
 
+            al_draw_text(font, color, x,y, alignment, text);
+
+        }
+
+        void drawshadow(const char* text, ALLEGRO_COLOR color,  float x, float y, int alignment){
+
+            al_draw_text(font, al_map_rgb(192,192,192) , x + 3,y + 3, alignment, text);
+            al_draw_text(font, color, x,y, alignment, text);
+
+        }
+
+        void drawshadowcolor(const char* text, ALLEGRO_COLOR color, ALLEGRO_COLOR shade,  float x, float y, int alignment){
+
+            al_draw_text(font, shade , x + 3,y + 3, alignment, text);
             al_draw_text(font, color, x,y, alignment, text);
 
         }

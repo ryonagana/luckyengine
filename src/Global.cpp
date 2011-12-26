@@ -1,2 +1,2 @@
-#include "global.h"
+#include "Global.h"
 

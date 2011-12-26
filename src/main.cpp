@@ -1,6 +1,11 @@
 #include "main.h"
+#include "Global.h"
 #include "Player.h"
 #include "Fontmanager.h"
+#include "Level.h"
+#include "Enemy.h"
+#include "Snowman.h"
+#include "Ramp.h"
 
 ALLEGRO_EVENT_QUEUE *g_queue;
 ALLEGRO_DISPLAY *g_display;
@@ -28,7 +33,7 @@ int AllegroInit(){
     al_init_font_addon();
     al_init_ttf_addon();
     al_set_new_display_flags(ALLEGRO_WINDOWED);
-    g_display = al_create_display(800,600);
+    g_display = al_create_display(800,760);
 
     al_get_keyboard_state(&g_kbdstate);
     al_set_target_bitmap(g_screen);
@@ -63,8 +68,24 @@ int main(int argc, char* argv[]  ){
     redraw =  false;
 
     Player ski;
-    gFont ff("data\\GILLIGAN.ttf",50);
+    ski.InitPlayer();
 
+    Level teste;
+    Snowman  m("data\\snowman.bmp",100.0, 100.0);
+    Snowman  snow("data\\snowman.bmp",100.0, 500.0);
+    Ramp rampa(192,130);
+
+    snow.startanimation = false;
+    snow.repeatanimation = false;
+
+
+
+
+    gFont ff("data\\visitor1.ttf",50);
+
+    teste.open("mapa.txt");
+
+    double oldtime = al_get_time();
 
 
 
@@ -72,13 +93,40 @@ int main(int argc, char* argv[]  ){
 
         ALLEGRO_EVENT ev;
 
-        ski.Update(ticks);
-        redraw = true;
+
 
         al_wait_for_event(g_queue, &ev);
         ticks =   al_get_timer_count(g_timer);
 
         if( ev.type == ALLEGRO_EVENT_TIMER){
+
+
+
+        redraw = true;
+
+
+
+        if(ski.Collision.Collide(ski, snow)){
+
+
+            ski.Position.Y = ski.Position.Y - AbsoluteVal(snow.bound_y - 3);
+
+            snow.Play();
+
+        }
+
+
+
+        m.Update();
+        m.Play();
+        snow.Update();
+        ski.Update(ticks);
+        rampa.Update(ticks, ski);
+
+
+
+
+       debug_print("%lf\n", ALLEGRO_BPM_TO_SECS(oldtime));
 
 
 
@@ -90,14 +138,18 @@ int main(int argc, char* argv[]  ){
 
 
         if(redraw == true && al_event_queue_is_empty(g_queue)){
-            redraw = 0;
+            redraw = false;
 
             al_clear_to_color(al_map_rgb(255,255,255));
 
-
-            ff.draw("Ski do capeta seu capeta", al_map_rgb(255,0,0),0,0,0);
+            ff.drawshadow("V. 0.2.1", al_map_rgb(255,0,0),0,0,0);
 
             ski.Draw(g_screen);
+            rampa.Draw();
+            m.Draw(g_screen);
+            snow.Draw(g_screen);
+
+
 
 
             al_flip_display();
@@ -109,6 +161,9 @@ int main(int argc, char* argv[]  ){
     }
 
     al_destroy_display(g_display);
+    al_destroy_timer(g_timer);
+    al_destroy_bitmap(g_screen);
+
     exit(0);
 
 

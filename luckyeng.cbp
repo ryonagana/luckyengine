@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="6" />
 	<Project>
 		<Option title="luckyeng" />
+		<Option makefile="makefile.sh" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -11,6 +12,7 @@
 				<Option object_output="obj\Debug\" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -28,7 +30,6 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\liballegro-5.0.4-monolith-mt.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -36,16 +37,33 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Linker>
+			<Add library="C:\Program Files (x86)\CodeBlocks\MinGW\lib\liballegro-5.0.4-monolith-mt-debug.a" />
+		</Linker>
+		<Unit filename="src\Collidible.cpp" />
+		<Unit filename="src\Collidible.h" />
+		<Unit filename="src\Enemy.cpp" />
+		<Unit filename="src\Enemy.h" />
 		<Unit filename="src\FontManager.cpp" />
 		<Unit filename="src\FontManager.h" />
 		<Unit filename="src\Game.cpp" />
 		<Unit filename="src\Game.h" />
 		<Unit filename="src\Global.cpp" />
 		<Unit filename="src\Global.h" />
+		<Unit filename="src\Level.cpp" />
+		<Unit filename="src\Level.h" />
+		<Unit filename="src\LevelObject.cpp" />
+		<Unit filename="src\LevelObject.h" />
+		<Unit filename="src\Object.cpp" />
+		<Unit filename="src\Object.h" />
 		<Unit filename="src\Player.cpp" />
 		<Unit filename="src\Player.h" />
 		<Unit filename="src\Position.cpp" />
 		<Unit filename="src\Position.h" />
+		<Unit filename="src\Ramp.cpp" />
+		<Unit filename="src\Ramp.h" />
+		<Unit filename="src\Snowman.cpp" />
+		<Unit filename="src\Snowman.h" />
 		<Unit filename="src\main.cpp" />
 		<Unit filename="src\main.h" />
 		<Extensions>
