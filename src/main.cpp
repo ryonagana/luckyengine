@@ -1,11 +1,9 @@
 #include "main.h"
 #include "Global.h"
-#include "Player.h"
-#include "Fontmanager.h"
-#include "Level.h"
-#include "Enemy.h"
-#include "Snowman.h"
-#include "Ramp.h"
+#include "World.h"
+
+
+
 
 ALLEGRO_EVENT_QUEUE *g_queue;
 ALLEGRO_DISPLAY *g_display;
@@ -59,6 +57,7 @@ int AllegroInit(){
 
 int main(int argc, char* argv[]  ){
 
+    srand(time(NULL));
 
     if( AllegroInit() < 0 ){
         exit(0);
@@ -67,25 +66,9 @@ int main(int argc, char* argv[]  ){
     bool gamefinished = false;
     redraw =  false;
 
-    Player ski;
-    ski.InitPlayer();
-
-    Level teste;
-    Snowman  m("data\\snowman.bmp",100.0, 100.0);
-    Snowman  snow("data\\snowman.bmp",100.0, 500.0);
-    Ramp rampa(192,130);
-
-    snow.startanimation = false;
-    snow.repeatanimation = false;
+    Enemy *enemy = new Snowman(0,0);
 
 
-
-
-    gFont ff("data\\visitor1.ttf",11);
-
-    teste.open("mapa.txt");
-
-    double oldtime = al_get_time();
 
 
 
@@ -102,30 +85,10 @@ int main(int argc, char* argv[]  ){
 
 
 
+
+
+
         redraw = true;
-        debug_print("%f", oldtime);
-
-
-
-        if(ski.Collision.Collide(ski, snow)){
-
-
-            ski.Position.Y =   ski.Position.Y - snow.bound_y;
-
-            snow.Play();
-
-        }
-
-
-
-        m.Update();
-        m.Play();
-        snow.Update();
-        ski.Update(ticks);
-        rampa.Update(ticks, ski);
-
-
-
 
 
 
@@ -135,7 +98,7 @@ int main(int argc, char* argv[]  ){
 
 
 
-         ski.KeyboardUpdate(&ev);
+
 
 
         if(redraw == true && al_event_queue_is_empty(g_queue)){
@@ -143,14 +106,7 @@ int main(int argc, char* argv[]  ){
 
             al_clear_to_color(al_map_rgb(255,255,255));
 
-            ff.drawshadow("V. 0.2.1 - V.S Niketan", al_map_rgb(255,0,0),0,0,0);
-
-            ski.Draw(g_screen);
-            rampa.Draw();
-            m.Draw(g_screen);
-            snow.Draw(g_screen);
-
-
+            enemy->Draw(g_screen);
 
 
             al_flip_display();

@@ -8,6 +8,8 @@ class Enemy : public Object {
 
 
     public:
+
+
      Enemy();
      Collidible Collision;
      Enemy(float pos_x, float pos_y);

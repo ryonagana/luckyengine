@@ -7,17 +7,17 @@
 	<File name="src\Collidible.h" open="0" top="0" tabpos="13">
 		<Cursor position="35" topLine="0" />
 	</File>
-	<File name="src\Enemy.cpp" open="1" top="0" tabpos="2">
+	<File name="src\Enemy.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="135" topLine="21" />
 	</File>
-	<File name="src\Enemy.h" open="0" top="0" tabpos="3">
-		<Cursor position="155" topLine="0" />
+	<File name="src\Enemy.h" open="1" top="0" tabpos="7">
+		<Cursor position="131" topLine="0" />
 	</File>
 	<File name="src\FontManager.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="32" topLine="0" />
 	</File>
 	<File name="src\FontManager.h" open="0" top="0" tabpos="5">
-		<Cursor position="1085" topLine="30" />
+		<Cursor position="740" topLine="12" />
 	</File>
 	<File name="src\Game.cpp" open="0" top="0" tabpos="17">
 		<Cursor position="1464" topLine="63" />
@@ -25,14 +25,14 @@
 	<File name="src\Game.h" open="0" top="0" tabpos="2">
 		<Cursor position="126" topLine="0" />
 	</File>
-	<File name="src\Global.cpp" open="1" top="0" tabpos="8">
+	<File name="src\Global.cpp" open="0" top="0" tabpos="8">
 		<Cursor position="11" topLine="0" />
 	</File>
-	<File name="src\Global.h" open="1" top="0" tabpos="9">
+	<File name="src\Global.h" open="0" top="0" tabpos="9">
 		<Cursor position="527" topLine="16" />
 	</File>
-	<File name="src\Level.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="574" topLine="0" />
+	<File name="src\Level.cpp" open="1" top="1" tabpos="9">
+		<Cursor position="679" topLine="15" />
 	</File>
 	<File name="src\Level.h" open="0" top="0" tabpos="2">
 		<Cursor position="126" topLine="0" />
@@ -41,18 +41,18 @@
 		<Cursor position="274" topLine="0" />
 	</File>
 	<File name="src\LevelObject.h" open="0" top="0" tabpos="4">
-		<Cursor position="137" topLine="0" />
+		<Cursor position="70" topLine="0" />
 	</File>
-	<File name="src\Object.cpp" open="0" top="0" tabpos="9">
+	<File name="src\Object.cpp" open="1" top="0" tabpos="5">
 		<Cursor position="93" topLine="0" />
 	</File>
-	<File name="src\Object.h" open="1" top="0" tabpos="11">
-		<Cursor position="316" topLine="0" />
+	<File name="src\Object.h" open="1" top="0" tabpos="6">
+		<Cursor position="354" topLine="6" />
 	</File>
-	<File name="src\Player.cpp" open="1" top="1" tabpos="3">
+	<File name="src\Player.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="1129" topLine="45" />
 	</File>
-	<File name="src\Player.h" open="1" top="0" tabpos="10">
+	<File name="src\Player.h" open="0" top="0" tabpos="10">
 		<Cursor position="411" topLine="20" />
 	</File>
 	<File name="src\Position.cpp" open="0" top="0" tabpos="6">
@@ -61,20 +61,26 @@
 	<File name="src\Position.h" open="0" top="0" tabpos="5">
 		<Cursor position="66" topLine="0" />
 	</File>
-	<File name="src\Ramp.cpp" open="1" top="0" tabpos="6">
+	<File name="src\Ramp.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="553" topLine="4" />
 	</File>
-	<File name="src\Ramp.h" open="1" top="0" tabpos="1">
-		<Cursor position="143" topLine="0" />
+	<File name="src\Ramp.h" open="0" top="0" tabpos="1">
+		<Cursor position="351" topLine="0" />
 	</File>
-	<File name="src\Snowman.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="1040" topLine="26" />
+	<File name="src\Snowman.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="739" topLine="24" />
 	</File>
-	<File name="src\Snowman.h" open="0" top="0" tabpos="1">
-		<Cursor position="56" topLine="0" />
+	<File name="src\Snowman.h" open="1" top="0" tabpos="3">
+		<Cursor position="199" topLine="0" />
 	</File>
-	<File name="src\main.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="2367" topLine="112" />
+	<File name="src\World.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="62" topLine="0" />
+	</File>
+	<File name="src\World.h" open="1" top="0" tabpos="2">
+		<Cursor position="432" topLine="13" />
+	</File>
+	<File name="src\main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1934" topLine="95" />
 	</File>
 	<File name="src\main.h" open="0" top="0" tabpos="2">
 		<Cursor position="0" topLine="0" />

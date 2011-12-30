@@ -10,7 +10,8 @@ class Snowman : public Enemy {
      uint32_t time;
 
 
-     Snowman(const char* filename, float posx, float posy);
+     Snowman(float posx, float posy);
+     Snowman(int id, float posx, float posy);
      void Update();
      void Draw(ALLEGRO_BITMAP *buffer);
 

@@ -17,6 +17,8 @@ class Object {
         int width, height;
         ALLEGRO_BITMAP *spr;
         float Speed;
+        int id;
+        bool alive;
 
 
         Vector2<float> Position;

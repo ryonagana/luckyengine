@@ -21,15 +21,15 @@ void Level::open(const char* filename){
     fs.open(filename);
 
     getline(fs, tmpdata);
-    sscanf(tmpdata.c_str(),";%d %d", &MapWidth, &MapHeight);
+    sscanf(tmpdata.c_str(),";%d %d\n", &MapWidth, &MapHeight);
     //cout << lvobj.width << endl;
     //cout << lvobj.height << endl;
-    debug_print("Width: %d  Height: %d", lvobj.width , lvobj.height);
+    debug_print("Width: %d  Height: %d\n", lvobj.width , lvobj.height);
 
     getline(fs, tmpdata);
     sscanf(tmpdata.c_str(),";%s", &MapName);
     //cout << lvobj.name << endl;
-    debug_print("Name: %s", MapName);
+    debug_print("Name: %s\n", MapName);
 
      getline(fs, tmpdata);
 
