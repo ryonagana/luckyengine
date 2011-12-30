@@ -41,8 +41,19 @@ class gFont {
 
         void drawshadowcolor(const char* text, ALLEGRO_COLOR color, ALLEGRO_COLOR shade,  float x, float y, int alignment){
 
-            al_draw_text(font, shade , x + 3,y + 3, alignment, text);
-            al_draw_text(font, color, x,y, alignment, text);
+            if(size > 20 ){
+                al_draw_text(font, shade , x + 3,y + 3, alignment, text);
+                al_draw_text(font, color, x,y, alignment, text);
+
+            }else if( size >= 10){
+
+                al_draw_text(font, shade , x + 1,y + 1, alignment, text);
+                al_draw_text(font, color, x,y, alignment, text);
+            }else if( size < 9) {
+
+                al_draw_text(font, color, x,y, alignment, text);
+
+            }
 
         }
 

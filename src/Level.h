@@ -14,8 +14,14 @@ class Level {
 
 
     public:
+
+        int MapWidth;
+        int MapHeight;
+        char MapName[32];
+
         void open(const char* filename);
         Level();
+        Level(const char* filename);
 
     private:
         ifstream fs;

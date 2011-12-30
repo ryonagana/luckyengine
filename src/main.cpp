@@ -81,7 +81,7 @@ int main(int argc, char* argv[]  ){
 
 
 
-    gFont ff("data\\visitor1.ttf",50);
+    gFont ff("data\\visitor1.ttf",11);
 
     teste.open("mapa.txt");
 
@@ -103,13 +103,14 @@ int main(int argc, char* argv[]  ){
 
 
         redraw = true;
+        debug_print("%f", oldtime);
 
 
 
         if(ski.Collision.Collide(ski, snow)){
 
 
-            ski.Position.Y = ski.Position.Y - AbsoluteVal(snow.bound_y - 3);
+            ski.Position.Y =   ski.Position.Y - snow.bound_y;
 
             snow.Play();
 
@@ -126,7 +127,7 @@ int main(int argc, char* argv[]  ){
 
 
 
-       debug_print("%lf\n", ALLEGRO_BPM_TO_SECS(oldtime));
+
 
 
 
@@ -142,7 +143,7 @@ int main(int argc, char* argv[]  ){
 
             al_clear_to_color(al_map_rgb(255,255,255));
 
-            ff.drawshadow("V. 0.2.1", al_map_rgb(255,0,0),0,0,0);
+            ff.drawshadow("V. 0.2.1 - V.S Niketan", al_map_rgb(255,0,0),0,0,0);
 
             ski.Draw(g_screen);
             rampa.Draw();

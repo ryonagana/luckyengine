@@ -5,6 +5,10 @@ Level::Level(){
 
 }
 
+Level::Level(const char* filename){
+    open(filename);
+}
+
 void Level::open(const char* filename){
 
     //fp.open(filename);
@@ -17,15 +21,15 @@ void Level::open(const char* filename){
     fs.open(filename);
 
     getline(fs, tmpdata);
-    sscanf(tmpdata.c_str(),";%d %d", &lvobj.width, &lvobj.height);
+    sscanf(tmpdata.c_str(),";%d %d", &MapWidth, &MapHeight);
     //cout << lvobj.width << endl;
     //cout << lvobj.height << endl;
     debug_print("Width: %d  Height: %d", lvobj.width , lvobj.height);
 
     getline(fs, tmpdata);
-    sscanf(tmpdata.c_str(),";%s", &lvobj.name);
+    sscanf(tmpdata.c_str(),";%s", &MapName);
     //cout << lvobj.name << endl;
-    debug_print("Name: %s", lvobj.name);
+    debug_print("Name: %s", MapName);
 
      getline(fs, tmpdata);
 

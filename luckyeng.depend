@@ -282,7 +282,7 @@
 1320784511 source:c:\users\nicholas\desktop\luckyeng\src\fontmanager.cpp
 	"FontManager.h"
 
-1324564129 c:\users\nicholas\desktop\luckyeng\src\fontmanager.h
+1325252512 c:\users\nicholas\desktop\luckyeng\src\fontmanager.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_ttf.h>
@@ -303,10 +303,10 @@
 	<iostream>
 	<cstdio>
 
-1324309378 source:c:\users\nicholas\desktop\luckyeng\src\level.cpp
+1325252318 source:c:\users\nicholas\desktop\luckyeng\src\level.cpp
 	"Level.h"
 
-1324050358 c:\users\nicholas\desktop\luckyeng\src\level.h
+1325252269 c:\users\nicholas\desktop\luckyeng\src\level.h
 	<iostream>
 	<fstream>
 	<string>
@@ -316,7 +316,7 @@
 	<allegro5/allegro.h>
 	<map>
 
-1324056523 c:\users\nicholas\desktop\luckyeng\src\levelobject.h
+1325252153 c:\users\nicholas\desktop\luckyeng\src\levelobject.h
 	<iostream>
 
 1324056328 source:c:\users\nicholas\desktop\luckyeng\src\levelobject.cpp
@@ -325,7 +325,7 @@
 1324577886 source:c:\users\nicholas\desktop\luckyeng\src\object.cpp
 	"Object.h"
 
-1324904271 source:c:\users\nicholas\desktop\luckyeng\src\player.cpp
+1324908823 source:c:\users\nicholas\desktop\luckyeng\src\player.cpp
 	"Player.h"
 	"Global.h"
 
@@ -356,7 +356,7 @@
 1324066406 c:\users\nicholas\desktop\luckyeng\src\snowman.h
 	"Enemy.h"
 
-1324908777 source:c:\users\nicholas\desktop\luckyeng\src\main.cpp
+1325252371 source:c:\users\nicholas\desktop\luckyeng\src\main.cpp
 	"main.h"
 	"Global.h"
 	"Player.h"
