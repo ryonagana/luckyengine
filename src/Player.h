@@ -16,7 +16,7 @@ class Player : public Object {
 
         void InitPlayer();
 
-
+        Player();
         Vector2<float> PlayerPosition;
         ALLEGRO_BITMAP *playerSprite;
         int animNum;

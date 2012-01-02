@@ -256,10 +256,11 @@
 	<allegro5/allegro_font.h>
 	<allegro5/allegro_ttf.h>
 
-1324575729 source:c:\users\nicholas\desktop\luckyeng\src\collidible.cpp
+1325510622 source:c:\users\nicholas\desktop\luckyeng\src\collidible.cpp
 	"Collidible.h"
+	"Enemy.h"
 
-1324575707 c:\users\nicholas\desktop\luckyeng\src\collidible.h
+1325510383 c:\users\nicholas\desktop\luckyeng\src\collidible.h
 	<iostream>
 	<allegro5/allegro5.h>
 	"Object.h"
@@ -272,10 +273,10 @@
 
 1324562508 c:\users\nicholas\desktop\luckyeng\src\position.h
 
-1324852297 source:c:\users\nicholas\desktop\luckyeng\src\enemy.cpp
+1325520675 source:c:\users\nicholas\desktop\luckyeng\src\enemy.cpp
 	"Enemy.h"
 
-1325256047 c:\users\nicholas\desktop\luckyeng\src\enemy.h
+1325522017 c:\users\nicholas\desktop\luckyeng\src\enemy.h
 	"Object.h"
 	"Collidible.h"
 
@@ -299,14 +300,17 @@
 1324845178 source:c:\users\nicholas\desktop\luckyeng\src\global.cpp
 	"Global.h"
 
-1324904877 c:\users\nicholas\desktop\luckyeng\src\global.h
+1325528016 c:\users\nicholas\desktop\luckyeng\src\global.h
 	<iostream>
 	<cstdio>
+	<sstream>
+	<string>
+	<allegro5/allegro.h>
 
-1325252318 source:c:\users\nicholas\desktop\luckyeng\src\level.cpp
+1325522540 source:c:\users\nicholas\desktop\luckyeng\src\level.cpp
 	"Level.h"
 
-1325252269 c:\users\nicholas\desktop\luckyeng\src\level.h
+1325521784 c:\users\nicholas\desktop\luckyeng\src\level.h
 	<iostream>
 	<fstream>
 	<string>
@@ -325,11 +329,11 @@
 1324577886 source:c:\users\nicholas\desktop\luckyeng\src\object.cpp
 	"Object.h"
 
-1324908823 source:c:\users\nicholas\desktop\luckyeng\src\player.cpp
+1325509003 source:c:\users\nicholas\desktop\luckyeng\src\player.cpp
 	"Player.h"
 	"Global.h"
 
-1324577853 c:\users\nicholas\desktop\luckyeng\src\player.h
+1325508963 c:\users\nicholas\desktop\luckyeng\src\player.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -350,30 +354,33 @@
 	"Collidible.h"
 	"Global.h"
 
-1325256156 source:c:\users\nicholas\desktop\luckyeng\src\snowman.cpp
+1325511560 source:c:\users\nicholas\desktop\luckyeng\src\snowman.cpp
 	"Snowman.h"
 
-1325256133 c:\users\nicholas\desktop\luckyeng\src\snowman.h
+1325511244 c:\users\nicholas\desktop\luckyeng\src\snowman.h
 	"Enemy.h"
+	"Global.h"
 
-1325262864 source:c:\users\nicholas\desktop\luckyeng\src\main.cpp
+1325527984 source:c:\users\nicholas\desktop\luckyeng\src\main.cpp
 	"main.h"
 	"Global.h"
 	"World.h"
 
-1321013737 c:\users\nicholas\desktop\luckyeng\src\main.h
+1325524005 c:\users\nicholas\desktop\luckyeng\src\main.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<allegro5/allegro_font.h>
 	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_primitives.h>
 
-1325263879 source:c:\users\nicholas\desktop\luckyeng\src\world.cpp
+1325527043 source:c:\users\nicholas\desktop\luckyeng\src\world.cpp
 	"World.h"
 
-1325263484 c:\users\nicholas\desktop\luckyeng\src\world.h
+1325524591 c:\users\nicholas\desktop\luckyeng\src\world.h
 	<iostream>
 	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
 	<vector>
 	"Player.h"
 	"Fontmanager.h"

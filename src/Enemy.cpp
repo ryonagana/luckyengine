@@ -8,6 +8,7 @@ Enemy::Enemy(){
     Position.X = 0;
     Position.Y = 0x0;
 
+
 }
 
 void Enemy::Play(){
@@ -30,14 +31,43 @@ Enemy::Enemy(const char *filepath, float pos_x, float pos_y){
 
 }
 
-void Enemy::Draw(ALLEGRO_BITMAP *buffer){
+void Enemy::Draw(){
 
-al_draw_bitmap_region(spr,0,0,32,32, Position.X , Position.Y ,0x0);
+al_draw_bitmap_region(spr,framepos * 32,0,32,32, Position.X , Position.Y ,0x0);
 
 
 }
 
 void Enemy::Update(uint64_t time){
+    if(startanimation){
+     time--;
+
+    if( (time % 8) == 0 ){
+
+        time = 8;
+
+         framepos++;
+
+        if( (framepos %  maxframes ) == 0){
+
+
+            if(repeatanimation){
+                framepos = 0;
+            }else{
+
+               int oldframe = framepos;
+               framepos = oldframe - 1;
+
+            }
+
+        }
+
+
+
+    }
+
+
+  }
 
 
 }

@@ -18,14 +18,18 @@ class Level {
         int MapWidth;
         int MapHeight;
         char MapName[32];
+        ALLEGRO_BITMAP *levelbuffer;
+
 
         void open(const char* filename);
         Level();
         Level(const char* filename);
 
+        vector<LevelObject> LevelObj;
+
     private:
         ifstream fs;
-        vector<LevelObject> LevelObj;
+
 
 };
 

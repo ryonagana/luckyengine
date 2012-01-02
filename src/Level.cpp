@@ -34,6 +34,7 @@ void Level::open(const char* filename){
      getline(fs, tmpdata);
 
 
+    debug_print("Level Size W: %d H:%d", lvobj.width * 32, lvobj.height * 32  );
 
 
 
@@ -45,7 +46,7 @@ void Level::open(const char* filename){
         getline(fs, tmpdata);
         sscanf(tmpdata.c_str(),"%c %f %f", &lvobj.obj_type, &lvobj.obj_x, &lvobj.obj_y);
         LevelObj.push_back( LevelObject(lvobj.obj_type, lvobj.obj_x, lvobj.obj_y));
-        debug_print("[DEBUG:] %f %f", lvobj.obj_x, lvobj.obj_y);
+        debug_print("[DEBUG:] %f %f\n", lvobj.obj_x, lvobj.obj_y);
 
 
     }

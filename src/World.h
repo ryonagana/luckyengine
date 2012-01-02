@@ -1,5 +1,6 @@
 #include <iostream>
 #include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
 #include <vector>
 
 #include "Player.h"
@@ -32,13 +33,21 @@ class World {
         vector<Ramp>  RampList;
         Level gameLevel;
 
+        bool Grid;
+
         void Input(ALLEGRO_EVENT *ev);
         void Update();
         void Draw();
         void Collision();
+        void DrawEnemies(ALLEGRO_DISPLAY *display);
 
     private:
-        double SeedEnemies(double val);
+
+        void CreateLevel(const char*  levelfilepath);
+        void CreateGrid(Level &thelevel);
+
+
+
 
 
 };

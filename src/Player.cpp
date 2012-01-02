@@ -1,6 +1,11 @@
 #include  "Player.h"
 #include "Global.h"
 
+Player::Player(){
+
+    InitPlayer();
+}
+
 void Player::InitPlayer(){
 
     spr =  al_load_bitmap("data/player.bmp");

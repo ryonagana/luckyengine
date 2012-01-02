@@ -75,11 +75,12 @@ void Snowman::Update(){
   }
 
 
+    debug_print("Frame: %d\n", framepos);
 
 
 }
 
-void Snowman::Draw(ALLEGRO_BITMAP *buffer){
+void Snowman::Draw(){
 
     if( framepos < 5){  al_draw_bitmap_region(spr, framepos * 32,0,32,32, Position.X , Position.Y ,0x0); }
     else{

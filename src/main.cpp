@@ -11,9 +11,43 @@ ALLEGRO_KEYBOARD_STATE g_kbdstate;
 ALLEGRO_BITMAP *g_screen;
 ALLEGRO_TIMER *g_timer;
 
+
 uint64_t ticks;
 
 bool redraw;
+
+char* getVersion(){
+
+    char ver[127];
+    char* str_version  = new char[127];
+
+    switch(ACTUAL_BUILD){
+
+    case BUILD_DEBUG:
+        sprintf(ver, "debug ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
+        break;
+    case BUILD_RELEASE:
+        sprintf(ver, "release ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
+        break;
+    case BUILD_ALPHA:
+        sprintf(ver, "alpha ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
+        break;
+    case BUILD_BETA:
+        sprintf(ver, "beta ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
+        break;
+    case BUILD_FINAL:
+        sprintf(ver, "final ver. %d.%d.%d.%d (unreachable lolol) :)", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
+        break;
+    case BUILD_SPECIAL:
+        sprintf(ver, "Nightly build ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
+        break;
+    }
+
+    strcpy(str_version, ver);
+
+    return str_version;
+
+}
 
 int AllegroInit(){
 
@@ -30,6 +64,7 @@ int AllegroInit(){
     al_init_image_addon();
     al_init_font_addon();
     al_init_ttf_addon();
+    al_init_primitives_addon();
     al_set_new_display_flags(ALLEGRO_WINDOWED);
     g_display = al_create_display(800,760);
 
@@ -59,6 +94,7 @@ int main(int argc, char* argv[]  ){
 
     srand(time(NULL));
 
+
     if( AllegroInit() < 0 ){
         exit(0);
     }
@@ -66,9 +102,13 @@ int main(int argc, char* argv[]  ){
     bool gamefinished = false;
     redraw =  false;
 
-    Enemy *enemy = new Snowman(0,0);
+    World myWorld;
+
+    myWorld.LoadWorld("mapa.cbmap");
+    myWorld.Grid = false;
 
 
+    gFont texto("data\\visitor1.ttf",12);
 
 
 
@@ -81,17 +121,12 @@ int main(int argc, char* argv[]  ){
         al_wait_for_event(g_queue, &ev);
         ticks =   al_get_timer_count(g_timer);
 
+
+
+
         if( ev.type == ALLEGRO_EVENT_TIMER){
 
-
-
-
-
-
         redraw = true;
-
-
-
 
 
         }else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) break;
@@ -106,7 +141,9 @@ int main(int argc, char* argv[]  ){
 
             al_clear_to_color(al_map_rgb(255,255,255));
 
-            enemy->Draw(g_screen);
+            texto.draw( getVersion(), al_map_rgb(255,0,0), 0,0,0 );
+
+            myWorld.DrawEnemies(g_display);
 
 
             al_flip_display();
