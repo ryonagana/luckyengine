@@ -5,7 +5,7 @@
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_primitives.h>
 
-#define TICKSPERFRAME 60
+const int TICKSPERFRAME = 60;
 
 using namespace std;
 

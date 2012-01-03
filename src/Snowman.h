@@ -13,6 +13,8 @@ class Snowman : public Enemy {
      Snowman(int id, float posx, float posy);
      void Update();
      void Draw();
+     void CollisionWith(Object &a, Enemy* &enemy);
+
 
 
 };

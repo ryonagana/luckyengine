@@ -3,6 +3,7 @@
 #include <allegro5/allegro_image.h>
 #include "Position.h"
 #include "Object.h"
+#include "Collidible.h"
 #include <cmath>
 
 static const float SpeedModifier[] = {0.5, 1.3, 1.9, 2.3, 3.0 };
@@ -32,6 +33,8 @@ class Player : public Object {
 
         void Draw(ALLEGRO_BITMAP *buffer);
         void KeyboardUpdate(ALLEGRO_EVENT *ev );
+
+
         void Update(uint64_t time);
 
     private:

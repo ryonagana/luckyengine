@@ -265,18 +265,17 @@
 	<allegro5/allegro5.h>
 	"Object.h"
 
-1325256061 c:\users\nicholas\desktop\luckyeng\src\object.h
+1325602353 c:\users\nicholas\desktop\luckyeng\src\object.h
 	<allegro5/allegro.h>
 	"Position.h"
-	"Collidible.h"
 	<iostream>
 
 1324562508 c:\users\nicholas\desktop\luckyeng\src\position.h
 
-1325520675 source:c:\users\nicholas\desktop\luckyeng\src\enemy.cpp
+1325603309 source:c:\users\nicholas\desktop\luckyeng\src\enemy.cpp
 	"Enemy.h"
 
-1325522017 c:\users\nicholas\desktop\luckyeng\src\enemy.h
+1325603130 c:\users\nicholas\desktop\luckyeng\src\enemy.h
 	"Object.h"
 	"Collidible.h"
 
@@ -297,10 +296,10 @@
 	<allegro5/allegro.h>
 	<allegro5/allegro_ttf.h>
 
-1324845178 source:c:\users\nicholas\desktop\luckyeng\src\global.cpp
+1325533265 source:c:\users\nicholas\desktop\luckyeng\src\global.cpp
 	"Global.h"
 
-1325528016 c:\users\nicholas\desktop\luckyeng\src\global.h
+1325596054 c:\users\nicholas\desktop\luckyeng\src\global.h
 	<iostream>
 	<cstdio>
 	<sstream>
@@ -326,19 +325,21 @@
 1324056328 source:c:\users\nicholas\desktop\luckyeng\src\levelobject.cpp
 	"LevelObject.h"
 
-1324577886 source:c:\users\nicholas\desktop\luckyeng\src\object.cpp
+1325599525 source:c:\users\nicholas\desktop\luckyeng\src\object.cpp
 	"Object.h"
+	"Collidible.h"
 
 1325509003 source:c:\users\nicholas\desktop\luckyeng\src\player.cpp
 	"Player.h"
 	"Global.h"
 
-1325508963 c:\users\nicholas\desktop\luckyeng\src\player.h
+1325600466 c:\users\nicholas\desktop\luckyeng\src\player.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	"Position.h"
 	"Object.h"
+	"Collidible.h"
 	<cmath>
 
 1321014355 source:c:\users\nicholas\desktop\luckyeng\src\position.cpp
@@ -354,19 +355,19 @@
 	"Collidible.h"
 	"Global.h"
 
-1325511560 source:c:\users\nicholas\desktop\luckyeng\src\snowman.cpp
+1325603387 source:c:\users\nicholas\desktop\luckyeng\src\snowman.cpp
 	"Snowman.h"
 
-1325511244 c:\users\nicholas\desktop\luckyeng\src\snowman.h
+1325603226 c:\users\nicholas\desktop\luckyeng\src\snowman.h
 	"Enemy.h"
 	"Global.h"
 
-1325527984 source:c:\users\nicholas\desktop\luckyeng\src\main.cpp
+1325602223 source:c:\users\nicholas\desktop\luckyeng\src\main.cpp
 	"main.h"
 	"Global.h"
 	"World.h"
 
-1325524005 c:\users\nicholas\desktop\luckyeng\src\main.h
+1325597171 c:\users\nicholas\desktop\luckyeng\src\main.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -374,10 +375,10 @@
 	<allegro5/allegro_ttf.h>
 	<allegro5/allegro_primitives.h>
 
-1325527043 source:c:\users\nicholas\desktop\luckyeng\src\world.cpp
+1325603096 source:c:\users\nicholas\desktop\luckyeng\src\world.cpp
 	"World.h"
 
-1325524591 c:\users\nicholas\desktop\luckyeng\src\world.h
+1325599679 c:\users\nicholas\desktop\luckyeng\src\world.h
 	<iostream>
 	<allegro5/allegro.h>
 	<allegro5/allegro_primitives.h>

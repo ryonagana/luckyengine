@@ -84,6 +84,20 @@ void World::CreateLevel(const char *levelfilemap){
 
 }
 
+void World::Collision(){
+
+
+    for(uint32_t i = 0; i <  EnemyList.size(); i++ ){
+
+        if( EnemyList.at(i)->CollideWith(SkiPlayer, EnemyList.at(i))  ){
+
+             EnemyList.at(i)->Play();
+        }
+
+    }
+
+
+}
 
 void World::DrawEnemies(ALLEGRO_DISPLAY *display){
 
@@ -106,6 +120,34 @@ void World::DrawEnemies(ALLEGRO_DISPLAY *display){
         }
 
     }
+
+}
+
+
+void World::Draw(ALLEGRO_DISPLAY *dsp){
+
+    SkiPlayer.Draw( al_get_backbuffer(dsp));
+
+}
+
+void World::Input(ALLEGRO_EVENT *ev){
+
+    SkiPlayer.KeyboardUpdate(ev);
+
+
+}
+
+void World::Update(){
+
+    SkiPlayer.Update(0);
+
+    for(uint32_t i = 0; i < EnemyList.size(); i++){
+
+        EnemyList.at(i)->Update(0);
+
+    }
+
+    Collision();
 
 }
 

@@ -1,4 +1,6 @@
 #include "Object.h"
+#include "Collidible.h"
+
 
 Object::Object(){
 
@@ -11,3 +13,4 @@ Object::Object(){
 
 
 }
+

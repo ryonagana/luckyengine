@@ -7,6 +7,11 @@ Enemy::Enemy(){
 
     Position.X = 0;
     Position.Y = 0x0;
+    maxtime = 8;
+    maxframes = 5;
+    time = maxtime;
+
+    startanimation = false;
 
 
 }
@@ -33,16 +38,26 @@ Enemy::Enemy(const char *filepath, float pos_x, float pos_y){
 
 void Enemy::Draw(){
 
-al_draw_bitmap_region(spr,framepos * 32,0,32,32, Position.X , Position.Y ,0x0);
+ if(framepos < maxframes){
+
+    al_draw_bitmap_region(spr,framepos * 32,0,32,32, Position.X , Position.Y ,0x0);
+
+    }else {
+
+    al_draw_bitmap_region(spr,0,0,32,32, Position.X , Position.Y ,0x0);
+
+    }
 
 
 }
+
+
 
 void Enemy::Update(uint64_t time){
     if(startanimation){
      time--;
 
-    if( (time % 8) == 0 ){
+    if( (time % maxframes) == 0 ){
 
         time = 8;
 
@@ -70,4 +85,14 @@ void Enemy::Update(uint64_t time){
   }
 
 
+}
+
+bool Enemy::CollideWith(Object &a, Enemy* &b){
+
+    if( Collision.EnemyCollide(a,b)){
+
+        return true;
+    }
+
+return false;
 }

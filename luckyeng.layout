@@ -25,11 +25,11 @@
 	<File name="src\Game.h" open="0" top="0" tabpos="2">
 		<Cursor position="126" topLine="0" />
 	</File>
-	<File name="src\Global.cpp" open="0" top="0" tabpos="8">
-		<Cursor position="23" topLine="0" />
+	<File name="src\Global.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="113" topLine="12" />
 	</File>
 	<File name="src\Global.h" open="1" top="0" tabpos="2">
-		<Cursor position="973" topLine="29" />
+		<Cursor position="1089" topLine="0" />
 	</File>
 	<File name="src\Level.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="679" topLine="15" />
@@ -79,10 +79,10 @@
 	<File name="src\World.h" open="0" top="0" tabpos="2">
 		<Cursor position="875" topLine="27" />
 	</File>
-	<File name="src\main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="2264" topLine="69" />
+	<File name="src\main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1610" topLine="25" />
 	</File>
-	<File name="src\main.h" open="0" top="0" tabpos="2">
-		<Cursor position="160" topLine="0" />
+	<File name="src\main.h" open="1" top="1" tabpos="4">
+		<Cursor position="266" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

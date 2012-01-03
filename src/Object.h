@@ -1,7 +1,7 @@
 #pragma once
 #include <allegro5/allegro.h>
 #include "Position.h"
-#include "Collidible.h"
+
 #include <iostream>
 
 using namespace std;
@@ -19,8 +19,7 @@ class Object {
         float Speed;
         int id;
         bool alive;
-
-
+        bool isCollidible;
         Vector2<float> Position;
 
         int bound_x;
@@ -34,4 +33,10 @@ class Object {
         virtual void Update() { return; }
         virtual void Play() { return; }
         virtual void Stop() { return;  }
+
+
+
+
+
+
 };

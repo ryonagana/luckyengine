@@ -1,7 +1,7 @@
 #include "Snowman.h"
 
 
-Snowman::Snowman(float posx, float posy){
+Snowman::Snowman(float posx, float posy) : Enemy() {
 
     spr = al_load_bitmap("data\\snowman.bmp");
     al_convert_mask_to_alpha(spr, al_map_rgb(255,0,255));
@@ -16,7 +16,10 @@ Snowman::Snowman(float posx, float posy){
     bound_y = 5;
 
     repeatanimation = false;
+    startanimation = false;
     alive = false;
+    maxframes = 5;
+    time = 8;
 
 }
 
@@ -37,6 +40,7 @@ Snowman::Snowman(int id, float posx, float posy){
 
     repeatanimation = false;
     alive = false;
+    isCollidible = true;
 
 }
 
@@ -44,49 +48,22 @@ Snowman::Snowman(int id, float posx, float posy){
 void Snowman::Update(){
 
 
-  if(startanimation){
-     time--;
-
-    if( (time % 8) == 0 ){
-
-        time = 8;
-
-         framepos++;
-
-        if( (framepos % 5) == 0){
-
-
-            if(repeatanimation){
-                framepos = 0;
-            }else{
-
-               int oldframe = framepos;
-               framepos = oldframe - 1;
-
-            }
-
-        }
-
-
-
-    }
-
-
-  }
-
 
     debug_print("Frame: %d\n", framepos);
 
 
+    return Enemy::Update(0);
 }
 
 void Snowman::Draw(){
 
-    if( framepos < 5){  al_draw_bitmap_region(spr, framepos * 32,0,32,32, Position.X , Position.Y ,0x0); }
-    else{
-        al_draw_bitmap_region(spr, 0,0,32,32, Position.X , Position.Y ,0x0);
+    Enemy::Draw();
+}
 
-        }
+void Snowman::CollisionWith(Object &a, Enemy* &enemy){
 
+    Enemy::CollideWith(a, enemy);
 
 }
+
+

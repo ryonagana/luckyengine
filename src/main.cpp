@@ -12,42 +12,10 @@ ALLEGRO_BITMAP *g_screen;
 ALLEGRO_TIMER *g_timer;
 
 
-uint64_t ticks;
 
 bool redraw;
+uint64_t gTime;
 
-char* getVersion(){
-
-    char ver[127];
-    char* str_version  = new char[127];
-
-    switch(ACTUAL_BUILD){
-
-    case BUILD_DEBUG:
-        sprintf(ver, "debug ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
-        break;
-    case BUILD_RELEASE:
-        sprintf(ver, "release ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
-        break;
-    case BUILD_ALPHA:
-        sprintf(ver, "alpha ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
-        break;
-    case BUILD_BETA:
-        sprintf(ver, "beta ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
-        break;
-    case BUILD_FINAL:
-        sprintf(ver, "final ver. %d.%d.%d.%d (unreachable lolol) :)", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
-        break;
-    case BUILD_SPECIAL:
-        sprintf(ver, "Nightly build ver. %d.%d.%d.%d", GAME_MAJOR, GAME_MINOR, GAME_VERSION, GAME_REVISION);
-        break;
-    }
-
-    strcpy(str_version, ver);
-
-    return str_version;
-
-}
 
 int AllegroInit(){
 
@@ -119,34 +87,49 @@ int main(int argc, char* argv[]  ){
 
 
         al_wait_for_event(g_queue, &ev);
-        ticks =   al_get_timer_count(g_timer);
+        gTime =  al_get_timer_count(g_timer);
 
 
 
 
-        if( ev.type == ALLEGRO_EVENT_TIMER){
-
-        redraw = true;
-
-
-        }else if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) break;
+        myWorld.Input(&ev);
 
 
 
+        if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
+
+            gamefinished = true;
+
+        }else  if( ev.type == ALLEGRO_EVENT_TIMER){
+
+            myWorld.Update();
+            redraw = true;
+
+
+        }else if( ev.type == ALLEGRO_EVENT_KEY_UP){
 
 
 
-        if(redraw == true && al_event_queue_is_empty(g_queue)){
+        }else if( ev.type == ALLEGRO_EVENT_KEY_DOWN){
+
+
+        }
+
+
+        if(redraw && al_event_queue_is_empty(g_queue)){
             redraw = false;
 
-            al_clear_to_color(al_map_rgb(255,255,255));
 
-            texto.draw( getVersion(), al_map_rgb(255,0,0), 0,0,0 );
 
+            texto.draw(  Tools::getVersion(BUILD_FINAL), al_map_rgb(255,0,0), 0,0,0 );
+
+
+            myWorld.Draw(g_display);
             myWorld.DrawEnemies(g_display);
 
 
             al_flip_display();
+            al_clear_to_color(al_map_rgb(255,255,255));
 
 
 

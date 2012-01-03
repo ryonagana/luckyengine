@@ -37,7 +37,7 @@ class World {
 
         void Input(ALLEGRO_EVENT *ev);
         void Update();
-        void Draw();
+        void Draw(ALLEGRO_DISPLAY *dsp);
         void Collision();
         void DrawEnemies(ALLEGRO_DISPLAY *display);
 

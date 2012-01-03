@@ -48,6 +48,14 @@ T Cast(T num){
 }
 
 
+class Tools {
+
+    public:
+
+        static char* getVersion(int build);
+
+};
+
 
 
 
