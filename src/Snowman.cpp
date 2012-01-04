@@ -7,7 +7,7 @@ Snowman::Snowman(float posx, float posy) : Enemy() {
     al_convert_mask_to_alpha(spr, al_map_rgb(255,0,255));
     frameactual = 0;
     framepos = 0;
-    time = 5;
+    maxtime = 15;
 
 
     Position.X = posx;

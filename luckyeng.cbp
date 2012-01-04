@@ -64,6 +64,8 @@
 		<Unit filename="src\Ramp.h" />
 		<Unit filename="src\Snowman.cpp" />
 		<Unit filename="src\Snowman.h" />
+		<Unit filename="src\Tree.cpp" />
+		<Unit filename="src\Tree.h" />
 		<Unit filename="src\World.cpp" />
 		<Unit filename="src\World.h" />
 		<Unit filename="src\main.cpp" />

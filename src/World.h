@@ -6,9 +6,10 @@
 #include "Player.h"
 #include "Fontmanager.h"
 #include "Level.h"
-#include "Enemy.h"
+
 #include "Snowman.h"
 #include "Ramp.h"
+#include "Tree.h"
 
 
 using namespace std;

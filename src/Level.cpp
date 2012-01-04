@@ -21,7 +21,7 @@ void Level::open(const char* filename){
     fs.open(filename);
 
     getline(fs, tmpdata);
-    sscanf(tmpdata.c_str(),";%d %d\n", &MapWidth, &MapHeight);
+    sscanf(tmpdata.c_str(),";%d %d", &MapWidth, &MapHeight);
     //cout << lvobj.width << endl;
     //cout << lvobj.height << endl;
     debug_print("Width: %d  Height: %d\n", lvobj.width , lvobj.height);

@@ -60,26 +60,39 @@ void World::CreateLevel(const char *levelfilemap){
 
     gameLevel.open(levelfilemap);
     vector<LevelObject>::iterator levelItem;
+    Enemy* enemy;
     //gameLevel.levelbuffer = al_create_bitmap(gameLevel.MapWidth * 32, gameLevel.MapHeight * 32);
 
 
 
     for(levelItem  =  gameLevel.LevelObj.begin(); levelItem < gameLevel.LevelObj.end(); ++levelItem){
 
+        if(levelItem->obj_x <= gameLevel.MapWidth || levelItem->obj_y <= gameLevel.MapHeight){
+
         switch(levelItem->obj_type){
 
         case 's': // create a Snowman!
 
-            Enemy* enemy = new Snowman(levelItem->obj_x, levelItem->obj_y);
+            enemy = new Snowman(levelItem->obj_x, levelItem->obj_y);
             enemy->alive = true;
             EnemyList.push_back (enemy);
+            break;
+
+        case 't': // create tree
+
+            enemy = new ObjTree(levelItem->obj_x, levelItem->obj_y);
+            enemy->alive = true;
+            EnemyList.push_back(enemy);
             break;
 
         }
 
 
-    }
 
+
+
+    }
+}
 
 
 }

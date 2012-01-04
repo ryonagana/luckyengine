@@ -121,7 +121,7 @@ int main(int argc, char* argv[]  ){
 
 
 
-            texto.draw(  Tools::getVersion(BUILD_FINAL), al_map_rgb(255,0,0), 0,0,0 );
+            texto.draw(  Tools::getVersion(BUILD_DEBUG), al_map_rgb(255,0,0), 0,0,0 );
 
 
             myWorld.Draw(g_display);
