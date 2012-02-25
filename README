@@ -1,0 +1,6 @@
+Lucky engine: a 2d easy game engine
+
+FIX #23:
+	1.Fix unix paths
+	2.Fix level loading on *nix
+	3.Fixed object loading
