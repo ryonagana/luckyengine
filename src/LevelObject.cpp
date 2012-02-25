@@ -6,6 +6,8 @@ LevelObject::LevelObject(char object, float x, float y){
     obj_y = y;
 }
 
+
+
 LevelObject::LevelObject(){
 
     obj_type = '\0';

@@ -3,7 +3,7 @@
 
 Ramp::Ramp(){
 
-    spr = al_load_bitmap("data\\ramp.bmp");
+    spr = al_load_bitmap("data//ramp.bmp");
     Position.X = 0;
     Position.Y = 0;
     bound_x = 32;
@@ -13,7 +13,7 @@ Ramp::Ramp(){
 
 Ramp::Ramp(float x, float y){
 
-    spr = al_load_bitmap("data\\ramp.bmp");
+    spr = al_load_bitmap("data//ramp.bmp");
 
     if(spr != NULL){
 

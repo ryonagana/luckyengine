@@ -76,7 +76,7 @@ int main(int argc, char* argv[]  ){
     myWorld.Grid = false;
 
 
-    gFont texto("data\\visitor1.ttf",12);
+    gFont texto("data//visitor1.ttf",12);
 
 
 

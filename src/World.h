@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "Player.h"
-#include "Fontmanager.h"
+#include "FontManager.h"
 #include "Level.h"
 
 #include "Snowman.h"

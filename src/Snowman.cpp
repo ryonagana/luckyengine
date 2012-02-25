@@ -3,7 +3,7 @@
 
 Snowman::Snowman(float posx, float posy) : Enemy() {
 
-    spr = al_load_bitmap("data\\snowman.bmp");
+    spr = al_load_bitmap("data//snowman.bmp");
     al_convert_mask_to_alpha(spr, al_map_rgb(255,0,255));
     frameactual = 0;
     framepos = 0;
@@ -26,7 +26,7 @@ Snowman::Snowman(float posx, float posy) : Enemy() {
 
 Snowman::Snowman(int id, float posx, float posy){
 
-    spr = al_load_bitmap("data\\snowman.bmp");
+    spr = al_load_bitmap("data//snowman.bmp");
     al_convert_mask_to_alpha(spr, al_map_rgb(255,0,255));
     frameactual = 0;
     framepos = 0;

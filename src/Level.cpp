@@ -11,8 +11,50 @@ Level::Level(const char* filename){
 
 void Level::open(const char* filename){
 
+   // LevelObj lvobj;
+    ifstream level;
+
+
+    int width, height;
+    string name;
+
+
+    level.open(filename);
+
+    if(!level.good()){
+
+        cout << "Cannot Open :" << filename << endl;
+        /*  if map file not exists gasme throws a FATAL ERROR */
+
+        //allegro_exit();
+        exit(0);
+    }
+
+
+    level >> width >> height;
+    level >> name;
+
+    while(level.eof() ){
+
+    char type;
+    float x,y;
+
+    level >> type >> x >> y;
+
+   debug_print("[LEVEL] %c %.2f %.2f", type, x, y);
+
+
+    }
+
+
+    level.close();
+
+
+
+
     //fp.open(filename);
 
+    /*
     string tmpdata;
 
 
@@ -54,6 +96,8 @@ void Level::open(const char* filename){
 
     fs.close();
     debug_print("%f %f", lvobj.obj_x, lvobj.obj_y);
+    */
+
 
 
 }

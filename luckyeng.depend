@@ -397,3 +397,144 @@
 	"Enemy.h"
 	"Global.h"
 
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Collidible.cpp
+	"Collidible.h"
+	"Enemy.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Collidible.h
+	<iostream>
+	<allegro5/allegro5.h>
+	"Object.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Object.h
+	<allegro5/allegro.h>
+	"Position.h"
+	<iostream>
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Position.h
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Enemy.h
+	"Object.h"
+	"Collidible.h"
+
+1330209080 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Enemy.cpp
+	"Enemy.h"
+
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/FontManager.cpp
+	"FontManager.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/FontManager.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+	<vector>
+
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Game.cpp
+	"Game.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Game.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Global.cpp
+	"Global.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Global.h
+	<iostream>
+	<cstdio>
+	<sstream>
+	<string>
+	<allegro5/allegro.h>
+
+1330212696 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Level.cpp
+	"Level.h"
+
+1330210084 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Level.h
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Global.h"
+	"LevelObject.h"
+	<allegro5/allegro.h>
+	<map>
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/LevelObject.h
+	<iostream>
+
+1330211536 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/LevelObject.cpp
+	"LevelObject.h"
+
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Object.cpp
+	"Object.h"
+	"Collidible.h"
+
+1330209093 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Player.cpp
+	"Player.h"
+	"Global.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Player.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	"Position.h"
+	"Object.h"
+	"Collidible.h"
+	<cmath>
+
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Position.cpp
+	"Position.h"
+
+1330209179 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Ramp.cpp
+	"Ramp.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Ramp.h
+	<iostream>
+	<allegro5/allegro.h>
+	"Object.h"
+	"Collidible.h"
+	"Global.h"
+
+1330209190 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Snowman.cpp
+	"Snowman.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Snowman.h
+	"Enemy.h"
+	"Global.h"
+
+1330209198 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/Tree.cpp
+	"Tree.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/Tree.h
+	"Enemy.h"
+	"Global.h"
+
+1330207988 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/World.cpp
+	"World.h"
+
+1330208170 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/World.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	"Player.h"
+	"FontManager.h"
+	"Level.h"
+	"Snowman.h"
+	"Ramp.h"
+	"Tree.h"
+
+1330208879 source:/home/ryonagana/Projetos/C/cbengine/luckyengine/src/main.cpp
+	"main.h"
+	"Global.h"
+	"World.h"
+
+1330207988 /home/ryonagana/Projetos/C/cbengine/luckyengine/src/main.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_primitives.h>
+

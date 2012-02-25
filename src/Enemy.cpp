@@ -2,7 +2,7 @@
 
 Enemy::Enemy(){
 
-    spr = al_load_bitmap("data\\snowman.bmp");
+    spr = al_load_bitmap("data//snowman.bmp");
 
 
     Position.X = 0;

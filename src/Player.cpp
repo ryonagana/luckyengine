@@ -8,7 +8,7 @@ Player::Player(){
 
 void Player::InitPlayer(){
 
-    spr =  al_load_bitmap("data/player.bmp");
+    spr =  al_load_bitmap("data//player.bmp");
     al_convert_mask_to_alpha(spr, al_map_rgb(255,0,255));
 
     frame = 0;
