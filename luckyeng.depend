@@ -538,3 +538,144 @@
 	<allegro5/allegro_ttf.h>
 	<allegro5/allegro_primitives.h>
 
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\collidible.cpp
+	"Collidible.h"
+	"Enemy.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\collidible.h
+	<iostream>
+	<allegro5/allegro5.h>
+	"Object.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\object.h
+	<allegro5/allegro.h>
+	"Position.h"
+	<iostream>
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\position.h
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\enemy.h
+	"Object.h"
+	"Collidible.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\enemy.cpp
+	"Enemy.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\fontmanager.cpp
+	"FontManager.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\fontmanager.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+	<vector>
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\game.cpp
+	"Game.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\game.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_ttf.h>
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\global.cpp
+	"Global.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\global.h
+	<iostream>
+	<cstdio>
+	<sstream>
+	<string>
+	<allegro5/allegro.h>
+
+1330294336 source:e:\programacao\c\luckyengine\luckyengine\src\level.cpp
+	"Level.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\level.h
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	"Global.h"
+	"LevelObject.h"
+	<allegro5/allegro.h>
+	<map>
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\levelobject.h
+	<iostream>
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\levelobject.cpp
+	"LevelObject.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\object.cpp
+	"Object.h"
+	"Collidible.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\player.cpp
+	"Player.h"
+	"Global.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\player.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	"Position.h"
+	"Object.h"
+	"Collidible.h"
+	<cmath>
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\position.cpp
+	"Position.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\ramp.cpp
+	"Ramp.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\ramp.h
+	<iostream>
+	<allegro5/allegro.h>
+	"Object.h"
+	"Collidible.h"
+	"Global.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\snowman.cpp
+	"Snowman.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\snowman.h
+	"Enemy.h"
+	"Global.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\tree.cpp
+	"Tree.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\tree.h
+	"Enemy.h"
+	"Global.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\world.cpp
+	"World.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\world.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_primitives.h>
+	<vector>
+	"Player.h"
+	"FontManager.h"
+	"Level.h"
+	"Snowman.h"
+	"Ramp.h"
+	"Tree.h"
+
+1330293455 source:e:\programacao\c\luckyengine\luckyengine\src\main.cpp
+	"main.h"
+	"Global.h"
+	"World.h"
+
+1330293455 e:\programacao\c\luckyengine\luckyengine\src\main.h
+	<iostream>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_primitives.h>
+

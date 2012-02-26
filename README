@@ -1,5 +1,8 @@
 Lucky engine: a 2d easy game engine
 
+FIX #24
+	1.Better level loading that works windows/linux
+
 FIX #23:
 	1.Fix unix paths
 	2.Fix level loading on *nix

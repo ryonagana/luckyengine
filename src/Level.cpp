@@ -13,7 +13,7 @@ void Level::open(const char* filename){
 
    // LevelObj lvobj;
     ifstream level;
-
+    string tmp;
 
     int width, height;
     string name;
@@ -30,11 +30,32 @@ void Level::open(const char* filename){
         exit(0);
     }
 
+    level >> width;
+    level >> height;
 
-    level >> width >> height;
-    level >> name;
+    level >> tmp;
 
-    while(level.eof() ){
+    while(level.good()){
+
+     char type;
+     float width, height;
+
+     level >> type;
+     level >> width;
+     level >> height;
+
+     debug_print("LevelObject: %c %.2f %.2f\n", type, width, height);
+     LevelObj.push_back( LevelObject(type,width,height));
+
+
+
+
+    }
+
+
+
+    /*
+    while(!level.eof() ){
 
     char type;
     float x,y;
@@ -44,10 +65,12 @@ void Level::open(const char* filename){
    debug_print("[LEVEL] %c %.2f %.2f", type, x, y);
 
 
+
     }
 
 
     level.close();
+    */
 
 
 
