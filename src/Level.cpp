@@ -12,14 +12,14 @@ Level::Level(const char* filename){
 void Level::open(const char* filename){
 
    // LevelObj lvobj;
-    ifstream level;
-    string tmp;
+    ifstream level; // init file descriptor  to handle level file
+    string tmp; // a temporary string container
 
-    int width, height;
-    string name;
+    int width, height;  // variable that handles map header  ans stores width and height
+    string name; //  variable that stores the name of the map
 
 
-    level.open(filename);
+    level.open(filename); //  open a file
 
     if(!level.good()){
 
@@ -27,30 +27,41 @@ void Level::open(const char* filename){
         /*  if map file not exists gasme throws a FATAL ERROR */
 
         //allegro_exit();
+        file.close();
         exit(0);
+
     }
 
-    level >> width;
-    level >> height;
+    level >> width;  // get firsat column of the file and retrieve width value file
+    level >> height; // get the second column and retrieve height vaue from the file
 
-    level >> tmp;
+    level >> tmp; //  handle the newline
 
-    while(level.good()){
+    while(level.good()){ // check if is file is good and not NULL and not EOF
 
-     char type;
-     float width, height;
+     char type;  // temporary variable stores type of the file (check line by line)
+     float width, height; // temporary variable width and height of the file (check line by line)
 
-     level >> type;
-     level >> width;
-     level >> height;
+     level >> type; // get the first column is type of the object  (char type expected)
+     level >> width; // get the second column is the position width of the object (float expected)
+     level >> height; // get the third column in the file and return the position height of the object (float expected)
 
-     debug_print("LevelObject: %c %.2f %.2f\n", type, width, height);
+     debug_print("LevelObject: %c %.2f %.2f\n", type, width, height); // jusat a secure print can be hide ifdef DEBUG = 0
+
+     /*
+     LevelObj is a vector that stores all objects of the map
+     i just push back a new Levelobject (each row is a new instance in the vector)
+     and stores for a further  reading and rendering the map
+     */
+
      LevelObj.push_back( LevelObject(type,width,height));
 
 
 
 
     }
+
+    level.close(); // close file descriptor
 
 
 
