@@ -27,7 +27,7 @@ void Level::open(const char* filename){
         /*  if map file not exists gasme throws a FATAL ERROR */
 
         //allegro_exit();
-        file.close();
+        level.close();
         exit(0);
 
     }
